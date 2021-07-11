@@ -1,0 +1,21 @@
+
+.animate{
+    
+    > span:first-child{
+        animation : rotate(05deg);
+      -webkit-animation: rotate(45deg);
+    }
+    >span:nth-child(2){
+      opacity:1;
+    }
+    >span:last-child{
+        animation : rotate(-45deg);
+      -webkit-animation: rotate(-45deg);
+      
+    }
+  }
+
+
+
+
+

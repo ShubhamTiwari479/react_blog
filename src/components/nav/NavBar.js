@@ -45,10 +45,10 @@ function NavBar() {
                     {/* BOX - 6 */}
                     <button className="box box6 hide-for-mobile " style={{ width: "160px", padding: "18px", marginLeft: "4px", marginRight: "4px", height: "75px" }}>Login</button>
 
-                    <div className="hamburger hide-for-desktop">
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                    <div className="hamburger hide-for-desktop animate"  >
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
 
 
