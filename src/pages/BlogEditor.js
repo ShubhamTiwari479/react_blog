@@ -11,7 +11,7 @@ export default function BlogEditor(props) {
     }
 
     return (
-        <div style={{marginRight: 10, marginLeft: 10}}>
+        <div style={{marginRight: 10, marginLeft: 10, marginTop: 20}}>
             <ReactQuill value={quillDelta}
                         onChange={handleChange}
                         theme="snow"

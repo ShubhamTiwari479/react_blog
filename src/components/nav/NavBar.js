@@ -1,57 +1,79 @@
 import React, { useState } from 'react';
 import './scss/Main.scss';
+import {alpha, AppBar, InputBase, makeStyles, Toolbar, Typography} from "@material-ui/core";
+import SearchIcon from '@material-ui/icons/Search';
 
+const useStyles = makeStyles((theme) => ({
 
-
+    title: {
+        display: 'none',
+        [theme.breakpoints.up('sm')]: {
+            display: 'block',
+        },
+    },
+    search: {
+        position: 'relative',
+        borderRadius: theme.shape.borderRadius,
+        backgroundColor: alpha(theme.palette.common.white, 0.15),
+        '&:hover': {
+            backgroundColor: alpha(theme.palette.common.white, 0.25),
+        },
+        marginRight: theme.spacing(2),
+        marginLeft: 0,
+        width: '100%',
+        [theme.breakpoints.up('sm')]: {
+            marginLeft: theme.spacing(3),
+            width: 'auto',
+        },
+    },
+    searchIcon: {
+        padding: theme.spacing(0, 2),
+        height: '100%',
+        position: 'absolute',
+        pointerEvents: 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    inputRoot: {
+        color: 'inherit',
+    },
+    inputInput: {
+        padding: theme.spacing(1, 1, 1, 0),
+        // vertical padding + font size from searchIcon
+        paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+        transition: theme.transitions.create('width'),
+        width: '100%',
+        [theme.breakpoints.up('md')]: {
+            width: '20ch',
+        },
+    },
+}));
 
 function NavBar() {
-
-    const [set, setstate] = useState(true);
+    const classes = useStyles();
 
     return (
-
-                <div className="navbar_container">
-
-
-
-                    {/* BOX - 1 */}
-                    <div className="box box1 " style={{ width: "200px", padding: "0px", height: "55px", fontFamily: "serif", fontSize: "2.7em" }}>PubBlog.com</div>
-
-
-                    {/* BOX - 2 */}
-                    <input className="box box2 hide-for-mobile" style={{ width: "800px", marginLeft: "29px", height: "4.6rem" }} type="search" placeholder="search"></input>
-
-
-                    {/* BOX - 3 , 4 ,7 */}
-                    <div className="box box3"></div>
-                    <div className="box box4"></div>
-                    <div className="box box7"></div>
-
-
-                    {/* BOX - 5 */}
-                    <button className="box box5 hide-for-mobile" style={{
-                        width: "200px", padding: "18px", height: "75px",
-                    }}>About Us</button>
-
-
-
-                    {/* BOX - 6 */}
-                    <button className="box box6 hide-for-mobile " style={{ width: "160px", padding: "18px", marginLeft: "4px", marginRight: "4px", height: "75px" }}>Login</button>
-
-                    <div className="hamburger hide-for-desktop">
-                        <div></div>
-                        <div></div>
-                        <div></div>
+        <AppBar position="static">
+            <Toolbar>
+                <Typography className={classes.title} variant="h6" noWrap>
+                    PubBlog.com
+                </Typography>
+                <div className={classes.search}>
+                    <div className={classes.searchIcon}>
+                        <SearchIcon />
                     </div>
-
-
-
-
+                    <InputBase
+                        placeholder="Search…"
+                        classes={{
+                            root: classes.inputRoot,
+                            input: classes.inputInput,
+                        }}
+                        inputProps={{ 'aria-label': 'search' }}
+                    />
                 </div>
-
-
-
-
+            </Toolbar>
+        </AppBar>
     )
 }
 
