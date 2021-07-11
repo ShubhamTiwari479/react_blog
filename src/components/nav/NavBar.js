@@ -1,5 +1,5 @@
 import React, { useState } from 'react';              //importing React for JSX.
-import './scss/Main.scss';                         //commmand for installing scss => npm i scss sass.
+import './scss/Main.scss';                            //commmand for installing scss => npm i scss sass.
 
 
 
