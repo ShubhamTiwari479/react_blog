@@ -1,5 +1,5 @@
-import React, { useState } from 'react';              //importing React for JSX.
-import './scss/Main.scss';                            //commmand for installing scss => npm i scss sass.
+import React, { useState } from 'react';
+import './scss/Main.scss';
 
 
 
@@ -10,14 +10,7 @@ function NavBar() {
 
     return (
 
-
-        <div>
-
-
-
-
-            <div>
-                <div className="container">
+                <div className="navbar_container">
 
 
 
@@ -37,7 +30,7 @@ function NavBar() {
 
                     {/* BOX - 5 */}
                     <button className="box box5 hide-for-mobile" style={{
-                        width: "200px", height: "43px", padding: "18px", height: "75px",
+                        width: "200px", padding: "18px", height: "75px",
                     }}>About Us</button>
 
 
@@ -55,11 +48,6 @@ function NavBar() {
 
 
                 </div>
-            </div>
-
-
-
-        </div>
 
 
 
