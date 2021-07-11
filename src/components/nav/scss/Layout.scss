@@ -1,6 +1,11 @@
 div{
     margin:5px;
     height: 5.4rem;
+    
+font-size: 100%;
+box-sizing: border-box;
+text-decoration: none;      
+  
 
 
       .box1{
@@ -11,6 +16,7 @@ div{
         color:#e6ba44;
         padding: 15rem;
         cursor: pointer;
+        margin-right:15px;
         
         }
       .box2
@@ -37,11 +43,16 @@ div{
         cursor: pointer;
         color:black;
         font-family: Arial, Helvetica, sans-serif;
-        button:hover{
-            background:blue;
-        }
+     
 
         }
+        .box5:hover{
+         background:#ffd900;
+        }
+        .box6:hover{
+          background:#ffd900;
+         }
+ 
 
 
       .box6{
@@ -73,4 +84,44 @@ div{
          border: 1px solid black;
          justify-content: space-around;
       }
+
+
+
+.hamburger{
+  margin-top:1.4em;
+  margin-right:1em;
+  div{
+     width:2.2em;
+     
+    padding:2px;
+  height: 0.3em;
+  background-color:#F4B400;
+  }
+  border-radius: 3px;
+  border: 1px solid black;
+  height: 37px;
+  
+ 
+}
+
+
+  
+
+
+//mixing 
+    
     }
+
+.hide-for-mobile{
+      @include breakpoint-down(large){
+          display: none;
+      }
+  }
+  
+  .hide-for-desktop{
+      @include breakpoint-up(medium){
+          
+          display: none;
+      }
+      
+  }
