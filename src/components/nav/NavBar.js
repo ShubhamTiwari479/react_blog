@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './scss/Main.scss';
 import {alpha, AppBar, InputBase, makeStyles, Toolbar, Typography} from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
 

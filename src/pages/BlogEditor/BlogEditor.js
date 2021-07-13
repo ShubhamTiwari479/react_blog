@@ -6,16 +6,17 @@ export default function BlogEditor(props) {
 
     const [quillDelta, setQuillDelta] = useState("")
 
-    function handleChange(value) {
-        setQuillDelta(value)
+    function handleChange(content, delta, source, editor) {
+        setQuillDelta(editor.getContents())
     }
 
     return (
         <div style={{marginRight: 10, marginLeft: 10, marginTop: 20}}>
-            <ReactQuill value={quillDelta}
-                        onChange={handleChange}
-                        theme="snow"
-                        placeholder={"Write Something here..."}
+            <ReactQuill
+                defaultValue={quillDelta}
+                onChange={handleChange}
+                theme="snow"
+                placeholder={"Write Something here..."}
             />
         </div>
     )
