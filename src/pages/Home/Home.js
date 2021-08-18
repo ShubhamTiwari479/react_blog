@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '5.25%', // 16:9
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -48,33 +48,43 @@ export default function RecipeReviewCard() {
   };
 
   return (
-    <Card className={classes.root}  style={{position:"absolute", left:"20rem", top:"5rem"}}>
+    <Card className={classes.root}  style={{position:"absolute", left:"1rem",right:"1rem", top:"6rem"}}>
       <CardHeader
+
+
+
+
+
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
             R
           </Avatar>
         }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
-      />
-      <CardMedia
-        className={classes.media}
-     
-        image="this.jpg"
         
-        title="Paella dish"
-      ></CardMedia>
+
+
+
+        title="Shrimp and Chorizo Paella"
+        
+
+
+
+
+
+      />
+     
       <CardContent>
+
+
+
         <Typography variant="body2" color="textSecondary" component="p">
           This impressive paella is a perfect party dish and a fun meal to cook together with your
           guests. Add 1 cup of frozen peas along with the mussels, if you like.
         </Typography>
+
+
+
+
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
@@ -96,11 +106,13 @@ export default function RecipeReviewCard() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-            minutes.
-          </Typography>
+          
+         
+
+
+
+
+
           <Typography paragraph>
             Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
             heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
@@ -119,6 +131,11 @@ export default function RecipeReviewCard() {
           <Typography>
             Set aside off of the heat to let rest for 10 minutes, and then serve.
           </Typography>
+
+
+
+
+
         </CardContent>
       </Collapse>
     </Card>
