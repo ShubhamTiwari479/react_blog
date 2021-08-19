@@ -19,7 +19,7 @@ export default function BlogPost() {
         .then(response => {
             console.log(response.data)
 
-            setPost(new Delta(response.data[38].ops))
+            setPost(new Delta(response.data[2].ops))
 
         }).catch((e) => {
                 console.error("error came while fetching", e)
@@ -44,7 +44,7 @@ export default function BlogPost() {
           
                 
           
-            <div dangerouslySetInnerHTML={{ __html: post }} />
+            <div dangerouslySetInnerHTML={{ __html: null }} />
         </div>
     )
 }
