@@ -18,7 +18,7 @@ function App() {
             <Route exact path="/blog-editor">
                 <BlogEditor />
             </Route>
-            <Route exact path="/blog-post">
+            <Route exact path="/blog-post/:postId">
                 <BlogPost />
             </Route>
         </Router>
